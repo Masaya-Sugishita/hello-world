@@ -20,6 +20,7 @@ namespace GitHubTest
                 num[i] = inputNumber(i+1);
                 Console.WriteLine(num[i]);
             }
+            Console.WriteLine(num[0]+"+"+num[1]+"="+Add(num));
             Console.Read();
             
         }
@@ -39,6 +40,11 @@ namespace GitHubTest
                 }
             }
             return input;
+        }
+
+        public static int Add(int[] num)
+        {
+            return num[0] + num[1];
         }
     }
 }
