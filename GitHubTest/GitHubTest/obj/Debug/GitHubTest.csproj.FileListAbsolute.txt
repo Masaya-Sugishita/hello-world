@@ -1,0 +1,7 @@
+C:\Users\SUGISHITA_M\hello-world\GitHubTest\GitHubTest\bin\Debug\GitHubTest.exe.config
+C:\Users\SUGISHITA_M\hello-world\GitHubTest\GitHubTest\bin\Debug\GitHubTest.exe
+C:\Users\SUGISHITA_M\hello-world\GitHubTest\GitHubTest\bin\Debug\GitHubTest.pdb
+C:\Users\SUGISHITA_M\hello-world\GitHubTest\GitHubTest\obj\Debug\GitHubTest.csprojAssemblyReference.cache
+C:\Users\SUGISHITA_M\hello-world\GitHubTest\GitHubTest\obj\Debug\GitHubTest.csproj.CoreCompileInputs.cache
+C:\Users\SUGISHITA_M\hello-world\GitHubTest\GitHubTest\obj\Debug\GitHubTest.exe
+C:\Users\SUGISHITA_M\hello-world\GitHubTest\GitHubTest\obj\Debug\GitHubTest.pdb
