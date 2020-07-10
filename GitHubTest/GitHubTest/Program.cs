@@ -21,8 +21,8 @@ namespace GitHubTest
                 Console.WriteLine(num[i]);
             }
             Console.WriteLine(num[0]+"+"+num[1]+"="+Add(num));
+            Console.WriteLine("計算終了");
             Console.Read();
-            
         }
 
         public static int inputNumber(int i)
