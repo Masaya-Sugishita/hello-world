@@ -13,7 +13,7 @@ namespace GitHubTest
             Console.WriteLine("Hello World!");
 
             Console.WriteLine("数字を二つ入力してください。");
-            int[] num=new int[2];
+            double[] num=new double[2];
 
             for (int i = 0; i < 2; i++)
             {
@@ -21,20 +21,21 @@ namespace GitHubTest
                 Console.WriteLine(num[i]);
             }
             Console.WriteLine(num[0]+"+"+num[1]+"="+Add(num));
+            Console.WriteLine(num[0] + "-" + num[1] + "=" + minus(num));
+            Console.WriteLine("計算終了");
             Console.Read();
-            
         }
 
-        public static int inputNumber(int i)
+        public static double inputNumber(int i)
         {
             string inputString;
-            int input;
+            double input;
 
             while (true)
             {
                 Console.Write(i+"番目の数字を入力してください：");
                 inputString = Console.ReadLine();
-                if(int.TryParse(inputString,out input))
+                if(double.TryParse(inputString,out input))
                 {
                     break;
                 }
@@ -42,9 +43,14 @@ namespace GitHubTest
             return input;
         }
 
-        public static int Add(int[] num)
+        public static double Add(double[] num)
         {
             return num[0] + num[1];
+        }
+
+        public static double minus(double[] num)
+        {
+            return num[0] - num[1];
         }
     }
 }
