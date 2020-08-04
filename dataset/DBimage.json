@@ -1,5 +1,5 @@
 {
-	"name": "TestCSVkanma",
+	"name": "DBimage",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureStorageLinkedService",
@@ -10,28 +10,14 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "test2.csv",
-				"folderPath": "input",
+				"folderPath": "db",
 				"container": "adftutorial"
 			},
-			"columnDelimiter": "|",
+			"columnDelimiter": ",",
 			"escapeChar": "\\",
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
-		"schema": [
-			{
-				"name": "ID",
-				"type": "String"
-			},
-			{
-				"name": "苗字",
-				"type": "String"
-			},
-			{
-				"name": "名前",
-				"type": "String"
-			}
-		]
+		"schema": []
 	}
 }

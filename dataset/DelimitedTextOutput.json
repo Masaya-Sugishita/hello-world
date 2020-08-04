@@ -13,7 +13,7 @@
 				"folderPath": "output",
 				"container": "adftutorial"
 			},
-			"columnDelimiter": ",",
+			"columnDelimiter": "|",
 			"escapeChar": "\\",
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
