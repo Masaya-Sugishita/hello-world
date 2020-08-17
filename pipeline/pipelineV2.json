@@ -19,7 +19,8 @@
 						"type": "DelimitedTextSource",
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
-							"recursive": true
+							"recursive": false,
+							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
 							"type": "DelimitedTextReadSettings"
@@ -43,7 +44,7 @@
 							{
 								"source": {
 									"name": "ID",
-									"type": "String",
+									"type": "Int32",
 									"physicalType": "String"
 								},
 								"sink": {
