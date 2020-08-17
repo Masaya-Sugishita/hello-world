@@ -9,16 +9,6 @@
 					"referenceName": "pipeline1",
 					"type": "PipelineReference"
 				}
-			},
-			{
-				"pipelineReference": {
-					"referenceName": "pipelineV2",
-					"type": "PipelineReference"
-				},
-				"parameters": {
-					"filepath": "@trigger().outputs.body.folderPath",
-					"filename": "@trigger().outputs.body.fileName"
-				}
 			}
 		],
 		"type": "BlobEventsTrigger",
