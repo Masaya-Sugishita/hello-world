@@ -39,6 +39,41 @@
 					"enableStaging": false,
 					"translator": {
 						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "ID",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "苗字",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "苗字",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "名前",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "名前",
+									"type": "String"
+								}
+							}
+						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,
