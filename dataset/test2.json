@@ -1,0 +1,32 @@
+{
+	"name": "test2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "BlobStarageV2",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "V2"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "test2.csv",
+				"folderPath": "input",
+				"container": "eventcontainer"
+			},
+			"columnDelimiter": "|",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "ID|苗字|名前",
+				"type": "String"
+			}
+		]
+	}
+}
