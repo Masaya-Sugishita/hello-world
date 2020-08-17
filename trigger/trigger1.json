@@ -23,7 +23,7 @@
 		],
 		"type": "BlobEventsTrigger",
 		"typeProperties": {
-			"blobPathBeginsWith": "/eventcontainer/blobs/input/",
+			"blobPathBeginsWith": "/eventcontainer/blobs/input",
 			"ignoreEmptyBlobs": true,
 			"scope": "/subscriptions/ca6718ec-bbab-4960-934a-1de3a725e5a2/resourceGroups/RG_PRO_NGR_NGR01/providers/Microsoft.Storage/storageAccounts/ramosdatafactoryevent",
 			"events": [
