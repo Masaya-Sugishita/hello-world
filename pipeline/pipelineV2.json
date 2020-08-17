@@ -60,6 +60,14 @@
 				]
 			}
 		],
+		"parameters": {
+			"filepath": {
+				"type": "string"
+			},
+			"filename": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
