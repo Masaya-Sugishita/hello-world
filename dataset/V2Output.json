@@ -1,0 +1,26 @@
+{
+	"name": "V2Output",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "BlobStarageV2",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "V2"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "output",
+				"container": "eventcontainer"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
