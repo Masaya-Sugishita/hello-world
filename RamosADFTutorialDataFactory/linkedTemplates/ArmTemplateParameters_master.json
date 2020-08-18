@@ -17,7 +17,7 @@
 		"AzureSqlDatabase1_properties_typeProperties_connectionString_secretName": {
 			"value": "AzureDBConnectionStringTest"
 		},
-		"trigger1_properties_typeProperties_scope": {
+		"trigger4_properties_typeProperties_scope": {
 			"value": "/subscriptions/ca6718ec-bbab-4960-934a-1de3a725e5a2/resourceGroups/RG_PRO_NGR_NGR01/providers/Microsoft.Storage/storageAccounts/ramosdatafactoryevent"
 		},
 		"containerUri": {

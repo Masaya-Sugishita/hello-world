@@ -23,7 +23,7 @@
 			"type": "string",
 			"defaultValue": "AzureDBConnectionStringTest"
 		},
-		"trigger1_properties_typeProperties_scope": {
+		"trigger4_properties_typeProperties_scope": {
 			"type": "string",
 			"defaultValue": "/subscriptions/ca6718ec-bbab-4960-934a-1de3a725e5a2/resourceGroups/RG_PRO_NGR_NGR01/providers/Microsoft.Storage/storageAccounts/ramosdatafactoryevent"
 		},
@@ -66,8 +66,8 @@
 					"AzureSqlDatabase1_properties_typeProperties_connectionString_secretName": {
 						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_connectionString_secretName')]"
 					},
-					"trigger1_properties_typeProperties_scope": {
-						"value": "[parameters('trigger1_properties_typeProperties_scope')]"
+					"trigger4_properties_typeProperties_scope": {
+						"value": "[parameters('trigger4_properties_typeProperties_scope')]"
 					}
 				}
 			},
