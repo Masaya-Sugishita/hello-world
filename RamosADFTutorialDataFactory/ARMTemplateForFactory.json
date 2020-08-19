@@ -475,41 +475,6 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/WranglingDataFlow1')]",
-			"type": "Microsoft.DataFactory/factories/dataflows",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"type": "WranglingDataFlow",
-				"typeProperties": {
-					"sources": [
-						{
-							"name": "TestCSVkanma",
-							"script": "",
-							"dataset": {
-								"referenceName": "TestCSVkanma",
-								"type": "DatasetReference"
-							}
-						}
-					],
-					"sinks": [
-						{
-							"name": "Sink1",
-							"dataset": {
-								"referenceName": "DelimitedTextOutput",
-								"type": "DatasetReference"
-							},
-							"script": "sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> Sink1"
-						}
-					],
-					"script": "section Section1;\r\nshared TestCSVkanma = let\r\n  AdfDoc = Web.Contents(\"https://linkdatafactory.blob.core.windows.net/adftutorial/input/test2.csv?sv=2018-03-28&sig=hDaxMiz6aPufxVzVBRSSNSRu0HekknHuOBkZuMDtvwU%3D&spr=https&se=2020-08-05T07%3A04%3A50Z&srt=sco&ss=bf&sp=rwl\"),\r\n  Csv = Csv.Document(AdfDoc, [Delimiter = \"|\", Encoding = TextEncoding.Utf8, QuoteStyle = QuoteStyle.Csv]),\r\n  PromotedHeaders = Table.PromoteHeaders(Csv, [PromoteAllScalars = true])\r\nin\r\n  PromotedHeaders;\r\nshared UserQuery = let\r\n  Source = TestCSVkanma\r\nin\r\n  Source;\r\n"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/datasets/TestCSVkanma')]",
-				"[concat(variables('factoryId'), '/datasets/DelimitedTextOutput')]"
-			]
-		},
-		{
 			"name": "[concat(parameters('factoryName'), '/trigger3')]",
 			"type": "Microsoft.DataFactory/factories/triggers",
 			"apiVersion": "2018-06-01",
@@ -562,13 +527,47 @@
 					"ignoreEmptyBlobs": true,
 					"scope": "[parameters('trigger4_properties_typeProperties_scope')]",
 					"events": [
-						"Microsoft.Storage.BlobCreated",
-						"Microsoft.Storage.BlobDeleted"
+						"Microsoft.Storage.BlobCreated"
 					]
 				}
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/pipelines/pipelineV2')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/WranglingDataFlow1')]",
+			"type": "Microsoft.DataFactory/factories/dataflows",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"type": "WranglingDataFlow",
+				"typeProperties": {
+					"sources": [
+						{
+							"name": "TestCSVkanma",
+							"script": "",
+							"dataset": {
+								"referenceName": "TestCSVkanma",
+								"type": "DatasetReference"
+							}
+						}
+					],
+					"sinks": [
+						{
+							"name": "Sink1",
+							"dataset": {
+								"referenceName": "DelimitedTextOutput",
+								"type": "DatasetReference"
+							},
+							"script": "sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> Sink1"
+						}
+					],
+					"script": "section Section1;\r\nshared TestCSVkanma = let\r\n  AdfDoc = Web.Contents(\"https://linkdatafactory.blob.core.windows.net/adftutorial/input/test2.csv?sv=2018-03-28&sig=hDaxMiz6aPufxVzVBRSSNSRu0HekknHuOBkZuMDtvwU%3D&spr=https&se=2020-08-05T07%3A04%3A50Z&srt=sco&ss=bf&sp=rwl\"),\r\n  Csv = Csv.Document(AdfDoc, [Delimiter = \"|\", Encoding = TextEncoding.Utf8, QuoteStyle = QuoteStyle.Csv]),\r\n  PromotedHeaders = Table.PromoteHeaders(Csv, [PromoteAllScalars = true])\r\nin\r\n  PromotedHeaders;\r\nshared UserQuery = let\r\n  Source = TestCSVkanma\r\nin\r\n  Source;\r\n"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/TestCSVkanma')]",
+				"[concat(variables('factoryId'), '/datasets/DelimitedTextOutput')]"
 			]
 		}
 	]

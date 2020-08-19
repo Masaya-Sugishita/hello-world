@@ -562,8 +562,7 @@
 					"ignoreEmptyBlobs": true,
 					"scope": "[parameters('trigger4_properties_typeProperties_scope')]",
 					"events": [
-						"Microsoft.Storage.BlobCreated",
-						"Microsoft.Storage.BlobDeleted"
+						"Microsoft.Storage.BlobCreated"
 					]
 				}
 			},
